@@ -2,8 +2,8 @@
 //  FirstView.m
 //  CAReplicatorLayer
 //
-//  Created by apple on 16/11/29.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Created by 槑 on 16/11/29.
+//  Copyright © 2016年 槑. All rights reserved.
 //
 
 #import "FirstView.h"
