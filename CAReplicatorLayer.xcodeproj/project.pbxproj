@@ -21,6 +21,7 @@
 		1856E2911DEC2E630026B40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1856E28F1DEC2E630026B40A /* LaunchScreen.storyboard */; };
 		1856E29C1DEC2E630026B40A /* CAReplicatorLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E29B1DEC2E630026B40A /* CAReplicatorLayerTests.m */; };
 		1856E2A71DEC2E630026B40A /* CAReplicatorLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */; };
+		18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7E1181DEEA5A100DC605D /* DefineButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		1856E2A21DEC2E630026B40A /* CAReplicatorLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAReplicatorLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerUITests.m; sourceTree = "<group>"; };
 		1856E2A81DEC2E630026B40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D7E1171DEEA5A100DC605D /* DefineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineButton.h; sourceTree = "<group>"; };
+		18D7E1181DEEA5A100DC605D /* DefineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 		1856E2B41DEC337F0026B40A /* UIBezierPathView */ = {
 			isa = PBXGroup;
 			children = (
+				18D7E1161DEEA47E00DC605D /* DefineButton */,
 				1856E2B51DEC337F0026B40A /* UIBezierPathView1 */,
 			);
 			path = UIBezierPathView;
@@ -186,6 +190,15 @@
 				1804FFDC1DED522F0029E4FB /* SixView.m */,
 			);
 			path = UIBezierPathView1;
+			sourceTree = "<group>";
+		};
+		18D7E1161DEEA47E00DC605D /* DefineButton */ = {
+			isa = PBXGroup;
+			children = (
+				18D7E1171DEEA5A100DC605D /* DefineButton.h */,
+				18D7E1181DEEA5A100DC605D /* DefineButton.m */,
+			);
+			path = DefineButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +345,7 @@
 				1804FFD71DED24850029E4FB /* FourView.m in Sources */,
 				1804FFDA1DED267E0029E4FB /* DefineCircle.m in Sources */,
 				1804FFD41DED20EC0029E4FB /* ThreeView.m in Sources */,
+				18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */,
 				1804FFDD1DED522F0029E4FB /* SixView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

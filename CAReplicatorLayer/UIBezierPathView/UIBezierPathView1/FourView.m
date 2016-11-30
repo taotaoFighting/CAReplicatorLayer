@@ -17,21 +17,45 @@
     if (self) {
         
         [self setBackgroundColor:[UIColor clearColor]];
+        
+        [self initLayer];
     }
     
     return self;
 }
 
--(void)drawRect:(CGRect)rect{
+-(void) initLayer{
     
-    UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(1, 1, self.bounds.size.width - 2, self.bounds.size.height - 2)];
+    CGRect rect = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     
-    [aPath setLineWidth:2.0];
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc]init];
     
-    [[UIColor redColor] set];
+    [shapeLayer setFrame:rect];
     
-    [aPath stroke];
+     UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.bounds.size.width , self.bounds.size.height )];
+    
+    [shapeLayer setPath:aPath.CGPath];
+    
+    [shapeLayer setStrokeColor:[[UIColor yellowColor] CGColor]];
+    
+    [shapeLayer setFillColor:[[UIColor clearColor] CGColor]];
+    
+    [shapeLayer setLineWidth:1.0f];
+    
+    [self.layer addSublayer:shapeLayer];
     
 }
+
+//-(void)drawRect:(CGRect)rect{
+//    
+//    UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(1, 1, self.bounds.size.width - 2, self.bounds.size.height - 2)];
+//    
+//    [aPath setLineWidth:2.0];
+//    
+//    [[UIColor redColor] set];
+//    
+//    [aPath stroke];
+//    
+//}
 
 @end

@@ -39,7 +39,7 @@
     
     CGFloat r2 = 400;
     
-    for (NSInteger i = center.x - sqrt(r2); i <= center.x + sqrt(r2); i=i + 3) {
+    for (NSInteger i = center.x - sqrt(r2); i <= center.x + sqrt(r2); i = i + 3) {
         
         CGFloat topY = center.y - sqrt((r2 - (i - center.x)*(i - center.x)));
         
