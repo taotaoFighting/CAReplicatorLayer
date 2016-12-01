@@ -155,7 +155,7 @@
     
     _defineButton = [[DefineButton alloc]initWithFrame:CGRectMake(KS_Width / 2 - 50, 480, 100, 100)];
 
-    [_defineButton setTitle:@"按钮" forState:UIControlStateNormal];
+    [_defineButton setTitle:@"点我" forState:UIControlStateNormal];
     
     [_defineButton.layer setCornerRadius:50];
     

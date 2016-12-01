@@ -9,7 +9,7 @@
 #import "DefineButton.h"
 #import "FourView.h"
 
-@interface DefineButton()
+@interface DefineButton()<CAAnimationDelegate>
 
 @property (nonatomic , strong) CAShapeLayer * shapeLayer;
 
@@ -29,57 +29,51 @@
     
     if (self) {
         
-        [self setBackgroundColor:[UIColor blueColor]];
+        [self setBackgroundColor:[UIColor blackColor]];
         
 //        [self initLayer];
         
-        [self initLayerc];
     }
     
     return self;
 }
 
-//- (FourView *)creatFourView{
-//    
-//    FourView *fourView = [[FourView alloc]initWithFrame:CGRectMake((self.bounds.size.width - self.bounds.size.height/5) / 2, (self.bounds.size.height - self.bounds.size.height/5) / 2, self.bounds.size.height/5,  self.bounds.size.height/5)];
-//    
-//    [self.fourViewArr addObject:fourView];
-//    
-//    return fourView;
-//}
 
 -(void) initLayerc{
     
-    CGRect rect = CGRectMake(0, 0, self.bounds.size.width/5, self.bounds.size.height/5);
+    CGRect rect = CGRectMake((self.bounds.size.width - self.bounds.size.height/15) / 2, (self.bounds.size.height - self.bounds.size.height/15) / 2, self.bounds.size.height/15,  self.bounds.size.height/15);
     
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc]init];
     
     [shapeLayer setFrame:rect];
     
-    UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.bounds.size.width / 5 , self.bounds.size.height /5 )];
+    UIBezierPath *aPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.bounds.size.height/15,  self.bounds.size.height/15)];
     
     [shapeLayer setPath:aPath.CGPath];
     
-    [shapeLayer setStrokeColor:[[UIColor yellowColor] CGColor]];
+    [shapeLayer setStrokeColor:[[self randomColor] CGColor]];
     
     [shapeLayer setFillColor:[[UIColor clearColor] CGColor]];
     
-    [shapeLayer setLineWidth:1.0f];
+    [shapeLayer setLineWidth:.1f];
     
     [self.layer addSublayer:shapeLayer];
     
-    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     
-    [basicAnimation setDuration:10];
+    [basicAnimation setDuration:3];
     
-    basicAnimation.fromValue = [NSValue valueWithCGRect:shapeLayer.frame];
+    basicAnimation.fromValue = @(.1);
     
-    basicAnimation.toValue = [NSValue valueWithCGRect:self.frame];
+    basicAnimation.toValue = @(14.5);
+    
+    [basicAnimation setRemovedOnCompletion:NO];
+    
+    [basicAnimation setFillMode:kCAFillModeRemoved];
+    
+    [basicAnimation setDelegate:self];
     
     [shapeLayer addAnimation:basicAnimation forKey:@"button"];
-    
-//    [self.fourViewArr addObject:shapeLayer];
-    
 }
 
 
@@ -89,7 +83,8 @@
     
     NSLog(@"x = %f   y = %f",[touch locationInView:self].x ,[touch locationInView:self].y);
     
-//    [self addSubview:[self creatFourView]];
+    [self initLayerc];
+
     
     return YES;
 }
@@ -106,6 +101,32 @@
     NSLog(@"endTrackingWithTouch");
 }
 
+
+-(void)animationDidStart:(CAAnimation *)anim{
+    
+    NSLog(@"animationDidStart");
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    for (NSInteger i = 0; i < self.layer.sublayers.count; i++) {
+        
+        id obj = self.layer.sublayers[i];
+        
+        if ([obj isKindOfClass:[CAShapeLayer class]]) {
+            
+            [obj removeFromSuperlayer];
+            
+            obj = nil;
+            
+            return;
+        }
+    }
+    
+
+    
+    NSLog(@"animationDidStop   %@",anim);
+}
 
 -(void) initLayer{
     
@@ -207,7 +228,7 @@
     
     [_shapeLayer setLineWidth:2.0f];
     
-    [_shapeLayer setStrokeColor:[[UIColor redColor] CGColor]];
+    [_shapeLayer setStrokeColor:[[self randomColor] CGColor]];
     
     [_shapeLayer setFillColor:[[UIColor clearColor] CGColor]];
     
@@ -234,5 +255,20 @@
     
     return _fourViewArr;
 }
+
+
+-(UIColor *) randomColor{
+    
+    CGFloat r = (CGFloat)(random() % 255) / 255.0f;
+    
+    CGFloat g = (CGFloat)(random() % 255) / 255.0f;
+    
+    CGFloat b = (CGFloat)(random() % 255) / 255.0f;
+    
+    NSLog(@"r= %f g = %f b = %f",r,g,b);
+    
+  return  [UIColor colorWithRed:r green:g blue:b alpha:.9];
+}
+
 
 @end

@@ -32,7 +32,7 @@
         
         [self startAnimationWithTovalue:1.0f];
         
-//        [self setUpTimer];
+        [self setUpTimer];
     }
     
     return self;
