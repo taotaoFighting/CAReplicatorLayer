@@ -15,13 +15,9 @@
 #import "SixView.h"
 #import "DefineButton.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()
 
 @property (nonatomic , strong) CAReplicatorLayer * replicator;
-
-@property (nonatomic , strong) NSMutableArray *dataArr;
-
-@property (nonatomic , strong) UITableView * mainTableView;
 
 @property (nonatomic , strong) FirstView * firstView;
 
@@ -97,55 +93,6 @@
     [self.view addSubview:self.defineButton];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return self.dataArr.count;
-}
-
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    static NSString *cellIndentifier = @"cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
-    
-    if (!cell) {
-        
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
-    }
-    
-    [cell.textLabel setText:self.dataArr[indexPath.row]];
-    
-    return cell;
-}
-
--(UITableView *)mainTableView{
-    
-    if (_mainTableView) {
-        
-        return _mainTableView;
-    }
-    
-    _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, KS_Width, KS_Height)];
-    
-    [_mainTableView setDataSource:self];
-    
-    [_mainTableView setDelegate:self];
-    
-    return _mainTableView;
-}
-
--(NSMutableArray *)dataArr{
-    
-    if (_dataArr) {
-        
-        return _dataArr;
-    }
-    
-    _dataArr = [NSMutableArray arrayWithObjects:@"方形", nil];
-    
-    return _dataArr;
-}
-
 -(DefineButton *)defineButton{
     
     if (_defineButton) {
@@ -153,11 +100,11 @@
         return _defineButton;
     }
     
-    _defineButton = [[DefineButton alloc]initWithFrame:CGRectMake(KS_Width / 2 - 50, 480, 100, 100)];
+    _defineButton = [[DefineButton alloc]initWithFrame:CGRectMake(KS_Width / 2 - 100, 400, Iphone7(200), Iphone7(200))];
 
     [_defineButton setTitle:@"点我" forState:UIControlStateNormal];
     
-    [_defineButton.layer setCornerRadius:50];
+    [_defineButton.layer setCornerRadius:100];
     
     
     
@@ -171,7 +118,7 @@
         return _sixView;
     }
     
-    _sixView = [[SixView alloc]initWithFrame:CGRectMake(KS_Width / 2 - 50, 370, 100, 100)];
+    _sixView = [[SixView alloc]initWithFrame:CGRectMake(KS_Width / 2 + 25, 260, Iphone7(100), Iphone7(100))];
     
     return _sixView;
 }
@@ -183,7 +130,7 @@
         return _defineCircle;
     }
     
-    _defineCircle = [[DefineCircle alloc]initWithFrame:CGRectMake(KS_Width / 2 - 50, 260, 100, 100)];
+    _defineCircle = [[DefineCircle alloc]initWithFrame:CGRectMake(KS_Width / 2 - Iphone7(100) - 25, 260, Iphone7(100), Iphone7(100))];
     
     return _defineCircle;
 }
@@ -195,7 +142,7 @@
         return _fourView;
     }
     
-    _fourView = [[FourView alloc]initWithFrame:CGRectMake(KS_Width / 2 - 25, 200, 50, 50)];
+    _fourView = [[FourView alloc]initWithFrame:CGRectMake(KS_Width / 2 + 25, 140, Iphone7(50), Iphone7(50))];
     
     return _fourView;
 }
@@ -207,7 +154,7 @@
         return _threeView;
     }
     
-    _threeView = [[ThreeView alloc]initWithFrame:CGRectMake(KS_Width / 2 - 25, 140, 100, 50)];
+    _threeView = [[ThreeView alloc]initWithFrame:CGRectMake(KS_Width / 2 - Iphone7(100) - 25, 140, Iphone7(100), Iphone7(50))];
     
     return _threeView;
 }
@@ -219,7 +166,7 @@
         return _secondView;
     }
     
-    _secondView = [[SecondView alloc]initWithFrame:CGRectMake(KS_Width / 2 - 25, 80, 100, 50)];
+    _secondView = [[SecondView alloc]initWithFrame:CGRectMake(KS_Width / 2 + 25, 80, Iphone7(100), Iphone7(50))];
     
     return _secondView;
 }
@@ -231,7 +178,7 @@
         return _firstView;
     }
     
-    _firstView = [[FirstView alloc]initWithFrame:CGRectMake(KS_Width / 2 - 25, 20, 100, 50)];
+    _firstView = [[FirstView alloc]initWithFrame:CGRectMake(KS_Width / 2 - Iphone7(100) - 25, 80, Iphone7(100), Iphone7(50))];
     
     return _firstView;
 }

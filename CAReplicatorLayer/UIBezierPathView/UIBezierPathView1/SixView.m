@@ -32,7 +32,7 @@
         
         [self startAnimationWithTovalue:1.0f];
         
-        [self setUpTimer];
+//        [self setUpTimer];
     }
     
     return self;
@@ -40,7 +40,7 @@
 
 -(void) setUpTimer{
     
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(pruductToValue) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(pruductToValue) userInfo:nil repeats:YES];
 }
 
 -(void) pruductToValue{
@@ -53,41 +53,48 @@
     
 }
 
--(void)setToValue:(CGFloat )value{
+-(void)setToValue:(CGFloat)toValue{
     
-    /**
-     *  0 <= tovalue <= 1
-     */
+    NSLog(@"++++++++++++toValue++++++++++++%f",toValue);
     
-    [self startAnimationWithTovalue:value];
+//    [self startAnimationWithTovalue:toValue];
     
-    self.endValue = value;
+    [self.shapeLayer setStrokeEnd:toValue];
     
+//    self.endValue = toValue;
 }
 
 - (void) startAnimationWithTovalue:(CGFloat) tovalue{
     
     [self.shapeLayer setStrokeEnd:tovalue];
     
-    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
     
-    [basicAnimation setDuration:3.0f];
+    [basicAnimation setDuration:.4f];
     
-    /**
-     *  起始动画位置 （相对于路径的位置）
-     */
+//    /**
+//     *  起始动画位置 （相对于路径的位置）
+//     */
+//    
+//    [basicAnimation setFromValue:@(self.endValue)];
+//    
+//    /**
+//     *  结束动画位置 （相对于路径的位置）
+//     */
+//    
+//    [basicAnimation setToValue:@(tovalue)];
     
-    [basicAnimation setFromValue:@(self.endValue)];
+//    basicAnimation.beginTime = CACurrentMediaTime() + 0.4;
     
-    /**
-     *  结束动画位置 （相对于路径的位置）
-     */
+    basicAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
     
-    [basicAnimation setToValue:@(tovalue)];
+    basicAnimation.fillMode  = kCAFillModeForwards;
     
-    [basicAnimation setRemovedOnCompletion:YES];
+    basicAnimation.removedOnCompletion = NO;
+
     
-    [self.shapeLayer addAnimation:basicAnimation forKey:@"shapeLayer"];
+    
+    [self.shapeLayer addAnimation:basicAnimation forKey:@"path"];
     
 }
 

@@ -10,7 +10,7 @@
 
 @interface SixView : UIView
 
-@property (nonatomic , assign) CGFloat value;
+@property (nonatomic , assign) IBInspectable CGFloat toValue;
 
 @property (nonatomic , assign) CGFloat endValue;
 

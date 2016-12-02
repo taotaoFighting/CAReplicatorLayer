@@ -36,7 +36,7 @@
     
     [shapeLayer setPath:aPath.CGPath];
     
-    [shapeLayer setStrokeColor:[[UIColor yellowColor] CGColor]];
+    [shapeLayer setStrokeColor:[[UIColor redColor] CGColor]];
     
     [shapeLayer setFillColor:[[UIColor clearColor] CGColor]];
     

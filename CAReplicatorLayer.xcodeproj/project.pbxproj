@@ -13,6 +13,13 @@
 		1804FFD71DED24850029E4FB /* FourView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804FFD61DED24850029E4FB /* FourView.m */; };
 		1804FFDA1DED267E0029E4FB /* DefineCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804FFD91DED267E0029E4FB /* DefineCircle.m */; };
 		1804FFDD1DED522F0029E4FB /* SixView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804FFDC1DED522F0029E4FB /* SixView.m */; };
+		1824121A1DF0FA8900D8F477 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182412191DF0FA8900D8F477 /* MainViewController.m */; };
+		1824121D1DF1023D00D8F477 /* WaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824121C1DF1023D00D8F477 /* WaveViewController.m */; };
+		182412221DF1036300D8F477 /* WavaImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182412211DF1036300D8F477 /* WavaImageView.m */; };
+		182412241DF105D200D8F477 /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 182412231DF105D200D8F477 /* water.jpg */; };
+		182412261DF10A2A00D8F477 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 182412251DF10A2A00D8F477 /* Podfile */; };
+		1824122B1DF1475400D8F477 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1824122A1DF1475400D8F477 /* Security.framework */; };
+		1824122E1DF1726800D8F477 /* SevenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824122D1DF1726800D8F477 /* SevenView.m */; };
 		1856E2831DEC2E630026B40A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2821DEC2E630026B40A /* main.m */; };
 		1856E2861DEC2E630026B40A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2851DEC2E630026B40A /* AppDelegate.m */; };
 		1856E2891DEC2E630026B40A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2881DEC2E630026B40A /* ViewController.m */; };
@@ -22,6 +29,7 @@
 		1856E29C1DEC2E630026B40A /* CAReplicatorLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E29B1DEC2E630026B40A /* CAReplicatorLayerTests.m */; };
 		1856E2A71DEC2E630026B40A /* CAReplicatorLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */; };
 		18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7E1181DEEA5A100DC605D /* DefineButton.m */; };
+		89F5A65E02D4EAC444A354B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8606DB24FF1BA23F4D6D333B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1208BC13AF37F496058BFB88 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1804FFCB1DED04F80029E4FB /* FirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstView.h; sourceTree = "<group>"; };
 		1804FFCC1DED04F80029E4FB /* FirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstView.m; sourceTree = "<group>"; };
 		1804FFCE1DED05DA0029E4FB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -55,12 +64,23 @@
 		1804FFD91DED267E0029E4FB /* DefineCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineCircle.m; sourceTree = "<group>"; };
 		1804FFDB1DED522F0029E4FB /* SixView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixView.h; sourceTree = "<group>"; };
 		1804FFDC1DED522F0029E4FB /* SixView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixView.m; sourceTree = "<group>"; };
+		182412181DF0FA8900D8F477 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Controllers/MainViewController.h; sourceTree = "<group>"; };
+		182412191DF0FA8900D8F477 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Controllers/MainViewController.m; sourceTree = "<group>"; };
+		1824121B1DF1023D00D8F477 /* WaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveViewController.h; sourceTree = "<group>"; };
+		1824121C1DF1023D00D8F477 /* WaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewController.m; sourceTree = "<group>"; };
+		182412201DF1036300D8F477 /* WavaImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavaImageView.h; sourceTree = "<group>"; };
+		182412211DF1036300D8F477 /* WavaImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WavaImageView.m; sourceTree = "<group>"; };
+		182412231DF105D200D8F477 /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
+		182412251DF10A2A00D8F477 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		1824122A1DF1475400D8F477 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1824122C1DF1726800D8F477 /* SevenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenView.h; sourceTree = "<group>"; };
+		1824122D1DF1726800D8F477 /* SevenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenView.m; sourceTree = "<group>"; };
 		1856E27E1DEC2E630026B40A /* CAReplicatorLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAReplicatorLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856E2821DEC2E630026B40A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1856E2841DEC2E630026B40A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1856E2851DEC2E630026B40A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1856E2871DEC2E630026B40A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1856E2881DEC2E630026B40A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1856E2871DEC2E630026B40A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		1856E2881DEC2E630026B40A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		1856E28B1DEC2E630026B40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1856E28D1DEC2E630026B40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1856E2901DEC2E630026B40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +93,8 @@
 		1856E2A81DEC2E630026B40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D7E1171DEEA5A100DC605D /* DefineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineButton.h; sourceTree = "<group>"; };
 		18D7E1181DEEA5A100DC605D /* DefineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineButton.m; sourceTree = "<group>"; };
+		2989F0E1167C00DF30D6C4AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8606DB24FF1BA23F4D6D333B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1824122B1DF1475400D8F477 /* Security.framework in Frameworks */,
+				89F5A65E02D4EAC444A354B0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,13 +124,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182412171DF0FA6500D8F477 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1856E2871DEC2E630026B40A /* ViewController.h */,
+				1856E2881DEC2E630026B40A /* ViewController.m */,
+				1824121B1DF1023D00D8F477 /* WaveViewController.h */,
+				1824121C1DF1023D00D8F477 /* WaveViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1824121E1DF1032700D8F477 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1824121F1DF1032700D8F477 /* Wave */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1824121F1DF1032700D8F477 /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				182412201DF1036300D8F477 /* WavaImageView.h */,
+				182412211DF1036300D8F477 /* WavaImageView.m */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
 		1856E2751DEC2E630026B40A = {
 			isa = PBXGroup;
 			children = (
+				182412251DF10A2A00D8F477 /* Podfile */,
 				1856E2801DEC2E630026B40A /* CAReplicatorLayer */,
 				1856E29A1DEC2E630026B40A /* CAReplicatorLayerTests */,
 				1856E2A51DEC2E630026B40A /* CAReplicatorLayerUITests */,
 				1856E27F1DEC2E630026B40A /* Products */,
+				48D57F230644C104EE9F34D3 /* Pods */,
+				CAF439E64E5AFB9AEC070CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,14 +178,17 @@
 		1856E2801DEC2E630026B40A /* CAReplicatorLayer */ = {
 			isa = PBXGroup;
 			children = (
+				1824121E1DF1032700D8F477 /* Views */,
+				182412171DF0FA6500D8F477 /* Controllers */,
 				1856E2B41DEC337F0026B40A /* UIBezierPathView */,
 				1856E2841DEC2E630026B40A /* AppDelegate.h */,
 				1856E2851DEC2E630026B40A /* AppDelegate.m */,
-				1856E2871DEC2E630026B40A /* ViewController.h */,
-				1856E2881DEC2E630026B40A /* ViewController.m */,
+				182412181DF0FA8900D8F477 /* MainViewController.h */,
+				182412191DF0FA8900D8F477 /* MainViewController.m */,
 				1804FFD81DED267E0029E4FB /* DefineCircle.h */,
 				1804FFD91DED267E0029E4FB /* DefineCircle.m */,
 				1856E28A1DEC2E630026B40A /* Main.storyboard */,
+				182412231DF105D200D8F477 /* water.jpg */,
 				1856E28D1DEC2E630026B40A /* Assets.xcassets */,
 				1856E28F1DEC2E630026B40A /* LaunchScreen.storyboard */,
 				1856E2921DEC2E630026B40A /* Info.plist */,
@@ -188,6 +246,8 @@
 				1804FFD61DED24850029E4FB /* FourView.m */,
 				1804FFDB1DED522F0029E4FB /* SixView.h */,
 				1804FFDC1DED522F0029E4FB /* SixView.m */,
+				1824122C1DF1726800D8F477 /* SevenView.h */,
+				1824122D1DF1726800D8F477 /* SevenView.m */,
 			);
 			path = UIBezierPathView1;
 			sourceTree = "<group>";
@@ -201,6 +261,24 @@
 			path = DefineButton;
 			sourceTree = "<group>";
 		};
+		48D57F230644C104EE9F34D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2989F0E1167C00DF30D6C4AE /* Pods.debug.xcconfig */,
+				1208BC13AF37F496058BFB88 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAF439E64E5AFB9AEC070CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1824122A1DF1475400D8F477 /* Security.framework */,
+				8606DB24FF1BA23F4D6D333B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1856E2AB1DEC2E630026B40A /* Build configuration list for PBXNativeTarget "CAReplicatorLayer" */;
 			buildPhases = (
+				6A2FD4A73EC1D1C481B8C872 /* Check Pods Manifest.lock */,
 				1856E27A1DEC2E630026B40A /* Sources */,
 				1856E27B1DEC2E630026B40A /* Frameworks */,
 				1856E27C1DEC2E630026B40A /* Resources */,
+				8D601B3B0EE519D1F44102EA /* Embed Pods Frameworks */,
+				9D5F21828E0A86BAD1E51920 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,9 +391,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182412261DF10A2A00D8F477 /* Podfile in Resources */,
 				1856E2911DEC2E630026B40A /* LaunchScreen.storyboard in Resources */,
 				1856E28E1DEC2E630026B40A /* Assets.xcassets in Resources */,
 				1856E28C1DEC2E630026B40A /* Main.storyboard in Resources */,
+				182412241DF105D200D8F477 /* water.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,19 +415,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A2FD4A73EC1D1C481B8C872 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D601B3B0EE519D1F44102EA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5F21828E0A86BAD1E51920 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1856E27A1DEC2E630026B40A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1824122E1DF1726800D8F477 /* SevenView.m in Sources */,
+				1824121A1DF0FA8900D8F477 /* MainViewController.m in Sources */,
 				1856E2891DEC2E630026B40A /* ViewController.m in Sources */,
 				1804FFCD1DED04F80029E4FB /* FirstView.m in Sources */,
+				182412221DF1036300D8F477 /* WavaImageView.m in Sources */,
 				1856E2861DEC2E630026B40A /* AppDelegate.m in Sources */,
 				1804FFD11DED13230029E4FB /* SecondView.m in Sources */,
 				1856E2831DEC2E630026B40A /* main.m in Sources */,
 				1804FFD71DED24850029E4FB /* FourView.m in Sources */,
 				1804FFDA1DED267E0029E4FB /* DefineCircle.m in Sources */,
 				1804FFD41DED20EC0029E4FB /* ThreeView.m in Sources */,
+				1824121D1DF1023D00D8F477 /* WaveViewController.m in Sources */,
 				18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */,
 				1804FFDD1DED522F0029E4FB /* SixView.m in Sources */,
 			);
@@ -491,6 +626,7 @@
 		};
 		1856E2AC1DEC2E630026B40A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2989F0E1167C00DF30D6C4AE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48EHPK785T;
@@ -504,6 +640,7 @@
 		};
 		1856E2AD1DEC2E630026B40A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1208BC13AF37F496058BFB88 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48EHPK785T;
