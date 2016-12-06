@@ -43,9 +43,9 @@
      *  sixView
      */
     
-//    [self.view addSubview:self.sixView];
+    [self.view addSubview:self.sixView];
     
-    [self.view addSubview:self.sevenView];
+//    [self.view addSubview:self.sevenView];
 
 }
 
@@ -64,7 +64,7 @@
     
     NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/kishikawakatsumi/UCZProgressView/master/Example/Images/9O7A2669.png"];
     
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc] init]];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     
     NSURLSessionTask *task = [session dataTaskWithRequest:[NSURLRequest requestWithURL:url]];
     
@@ -85,6 +85,8 @@
     
     self.expectedContentLength = response.expectedContentLength;
     
+    self.sevenView.progress = 0.0;
+    
     NSLog(@"1");
 }
 
@@ -102,12 +104,21 @@
     
     NSLog(@"ratio = %f" , receivedDataLength / self.expectedContentLength);
     
-    self.sevenView.progress = receivedDataLength / self.expectedContentLength;
+//    self.sevenView.progress = receivedDataLength / self.expectedContentLength;
+    
+    self.sixView.toValue = receivedDataLength / self.expectedContentLength;
 }
 
 // 3.请求成功或者失败（如果失败，error有值）
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     // 请求完成,成功或者失败的处理
+    
+    if (error) {
+        
+        NSLog(@"请求数据失败，请重试");
+        
+        return;
+    }
     
     NSLog(@"3");
     
@@ -127,6 +138,10 @@
     [self.waveImageView setCenter:self.view.center];
 
     [self.waveImageView setImage:image];
+    
+//    _sevenView.progress = 1.0f;
+    
+    self.sixView.toValue = 1.0f;
     
     NSLog(@"%@",task.response);
 }
@@ -152,7 +167,23 @@
         return _sevenView;
     }
     
-    _sevenView = [[SevenView alloc]initWithFrame:self.view.frame];
+    _sevenView = [[SevenView alloc]initWithFrame:CGRectMake(0, 0, KS_Width, KS_Height)];
+    
+    _sevenView.indeterminate = YES;
+    
+    _sevenView.blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    
+    _sevenView.showsText = YES;
+    
+    _sevenView.tintColor = [UIColor colorWithRed:0.0 green:122.0 / 255.0 blue:1.0 alpha:1.0];
+    
+    _sevenView.textColor = [UIColor darkTextColor];
+    
+    _sevenView.usesVibrancyEffect = NO;
+    
+    _sevenView.lineWidth = 2.0f;
+    
+    _sevenView.radius = 20.0f;
     
     return _sevenView;
 }

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ViewController.h"
 #import "WaveViewController.h"
+#import "MaskViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -56,9 +57,14 @@
     if (indexPath.row == 0) {
         
         controller = [[ViewController alloc]init];
+        
     }else if (indexPath.row == 1){
         
         controller = [[WaveViewController alloc]init];
+        
+    }else if (indexPath.row == 2){
+        
+        controller = [[MaskViewController alloc]init];
     }
     
     [self.navigationController pushViewController:controller animated:YES];
@@ -87,7 +93,7 @@
         return _dataArr;
     }
     
-    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"波纹", nil];
+    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"波纹",@"遮罩层", nil];
     
     return _dataArr;
 }

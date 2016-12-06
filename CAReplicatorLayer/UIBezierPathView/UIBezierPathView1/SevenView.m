@@ -8,7 +8,7 @@
 
 #import "SevenView.h"
 
-@interface SevenView()
+@interface SevenView()<CAAnimationDelegate>
 
 @property (nonatomic) CALayer *backgroundLayer;
 
@@ -25,7 +25,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initLayerAndData];
+        [self commonInit];
     }
     return self;
 }
@@ -33,21 +33,17 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        [self initLayerAndData];
+        [self commonInit];
     }
     return self;
 }
 
--(void)initLayerAndData{
-    
+- (void)commonInit {
     self.backgroundColor = [UIColor clearColor];
     
     self.lineWidth = 3.0;
-    
     self.tintColor = [UIColor colorWithRed:181.0 / 255.0 green:182.0 / 255.0 blue:183.0 / 255.0 alpha:1.0];
-    
     self.radius = 20.0;
-    
     self.usesVibrancyEffect = YES;
     
     [self.backgroundLayer addSublayer:self.progressLayer];
@@ -55,24 +51,41 @@
     self.backgroundView = [self defaultBackgroundView];
     
     self.indeterminate = YES;
-
 }
 
-- (UIView *)defaultBackgroundView {
+- (void)layoutSubviews {
+    [super layoutSubviews];
     
+    self.backgroundLayer.frame = self.bounds;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    path.lineCapStyle = kCGLineCapButt;
+    path.lineWidth = self.lineWidth;
+    [path addArcWithCenter:self.backgroundView.center radius:self.radius + self.lineWidth / 2 startAngle:-M_PI_2 endAngle:M_PI + M_PI_2 clockwise:YES];
+    
+    self.progressLayer.path = path.CGPath;
+    
+    [self layoutTextLabel];
+}
+
+#pragma mark -
+
+- (UIView *)defaultBackgroundView {
     UIView *backgroundView = [[UIView alloc] init];
     
-    backgroundView.backgroundColor = [UIColor whiteColor];
+    backgroundView.backgroundColor = [UIColor blueColor];
     
     return backgroundView;
 }
 
 - (void)setBackgroundView:(UIView *)backgroundView {
     if (_backgroundView.superview) {
+        
         [_backgroundView removeFromSuperview];
     }
     
     backgroundView.frame = self.bounds;
+    
     backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.backgroundLayer removeFromSuperlayer];
@@ -199,6 +212,7 @@
 
 - (void)setIndeterminate:(BOOL)indeterminate {
     if (_indeterminate == indeterminate) {
+        
         return;
     }
     _indeterminate = indeterminate;
@@ -206,21 +220,32 @@
     self.hidden = NO;
     
     if (indeterminate) {
+        
         _progressLayer.strokeStart = 0.1;
+        
         _progressLayer.strokeEnd = 1.0;
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        
         animation.toValue = @(M_PI);
+        
         animation.duration = 0.5;
+        
         animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
         animation.repeatCount = MAXFLOAT;
+        
         animation.cumulative = YES;
         
         [self.backgroundLayer addAnimation:animation forKey:nil];
+        
     } else {
+        
 #if !TARGET_INTERFACE_BUILDER
         _progressLayer.actions = @{@"strokeStart": [NSNull null], @"strokeEnd": [NSNull null]};
+        
         _progressLayer.strokeStart = 0.0;
+        
         _progressLayer.strokeEnd = 0.0;
         
         [self.backgroundLayer removeAllAnimations];
@@ -229,38 +254,49 @@
 }
 
 - (void)setProgress:(CGFloat)progress {
-    [self setProgress:progress animated:YES];
+    [self setProgress:progress animated:NO];
+    
+    NSLog(@"progress = %f",progress);
 }
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated {
     if (self.indeterminate) {
+        
         self.indeterminate = NO;
+        
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate date]];
     }
     
     if (_progress >= 1.0 && progress >= 1.0) {
+        
         _progress = 1.0;
+        
         return;
     }
     
     if (progress < 0.0) {
+        
         progress = 0.0;
     }
     if (progress > 1.0) {
+        
         progress = 1.0;
     }
     
     if (progress > 0.0) {
+        
         self.hidden = NO;
     }
     
     self.progressLayer.actions = animated ? nil : @{@"strokeEnd": [NSNull null]};
+    
     self.progressLayer.strokeEnd = progress;
     
     self.textLabel.text = [NSString stringWithFormat:@"%d%%", (int)(progress * 100)];
     [self layoutTextLabel];
     
     if (progress >= 1.0) {
+        
 #if !TARGET_INTERFACE_BUILDER
         [self performFinishAnimation];
 #endif
@@ -272,44 +308,67 @@
 #pragma mark -
 
 - (void)performFinishAnimation {
+    
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    
     maskLayer.backgroundColor = [UIColor blackColor].CGColor;
     
     CGPoint center = self.backgroundView.center;
     
     UIBezierPath *initialPath = [UIBezierPath bezierPathWithRect:self.backgroundView.bounds];
+    
     [initialPath moveToPoint:center];
+    
     [initialPath addArcWithCenter:center radius:self.radius startAngle:0.0 endAngle:2.0 * M_PI clockwise:YES];
+    
     [initialPath addArcWithCenter:center radius:self.radius + self.lineWidth startAngle:0.0 endAngle:2.0 * M_PI clockwise:YES];
+    
     initialPath.usesEvenOddFillRule = YES;
     
     maskLayer.path = initialPath.CGPath;
+    
     maskLayer.fillRule = kCAFillRuleEvenOdd;
     
     self.backgroundView.layer.mask = maskLayer;
     
     CGFloat outerRadius;
+    
     CGFloat width = CGRectGetWidth(self.bounds) / 2;
+    
     CGFloat height = CGRectGetHeight(self.bounds) / 2;
+    
     if (width < height) {
+        
         outerRadius = height * 1.5;
+        
     } else {
+        
         outerRadius = width * 1.5;
     }
     
     UIBezierPath *finalPath = [UIBezierPath bezierPathWithRect:self.backgroundView.bounds];
+    
     [finalPath moveToPoint:center];
+    
     [finalPath addArcWithCenter:center radius:0.0 startAngle:0.0 endAngle:2.0 * M_PI clockwise:YES];
+    
     [finalPath addArcWithCenter:center radius:outerRadius startAngle:0.0 endAngle:2.0 * M_PI clockwise:YES];
+    
     finalPath.usesEvenOddFillRule = YES;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+    
     animation.delegate = self;
+    
     animation.toValue = (id)finalPath.CGPath;
-    animation.duration = 0.4;
+    
+    animation.duration = .4;
+    
     animation.beginTime = CACurrentMediaTime() + 0.4;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    
     animation.fillMode  = kCAFillModeForwards;
+    
     animation.removedOnCompletion = NO;
     
     [maskLayer addAnimation:animation forKey:@"path"];
@@ -317,9 +376,13 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (self.animationDidStopBlock) {
+        
         self.animationDidStopBlock();
     }
     self.backgroundView.layer.mask = nil;
+    
+    NSLog(@"animationDidStop");
+    
     self.hidden = YES;
 }
 
@@ -339,5 +402,4 @@
         self.textLabel.center = self.backgroundView.center;
     }
 }
-
 @end

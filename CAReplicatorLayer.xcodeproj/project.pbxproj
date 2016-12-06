@@ -29,6 +29,8 @@
 		1856E29C1DEC2E630026B40A /* CAReplicatorLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E29B1DEC2E630026B40A /* CAReplicatorLayerTests.m */; };
 		1856E2A71DEC2E630026B40A /* CAReplicatorLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */; };
 		18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7E1181DEEA5A100DC605D /* DefineButton.m */; };
+		18F5DB861DF692C600A3A6BA /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB851DF692C600A3A6BA /* MaskViewController.m */; };
+		18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */; };
 		89F5A65E02D4EAC444A354B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8606DB24FF1BA23F4D6D333B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,10 @@
 		1856E2A81DEC2E630026B40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D7E1171DEEA5A100DC605D /* DefineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineButton.h; sourceTree = "<group>"; };
 		18D7E1181DEEA5A100DC605D /* DefineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineButton.m; sourceTree = "<group>"; };
+		18F5DB841DF692C600A3A6BA /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
+		18F5DB851DF692C600A3A6BA /* MaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
+		18F5DB8A1DF69A4300A3A6BA /* UIView+MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MaskView.h"; sourceTree = "<group>"; };
+		18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MaskView.m"; sourceTree = "<group>"; };
 		2989F0E1167C00DF30D6C4AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8606DB24FF1BA23F4D6D333B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +137,8 @@
 				1856E2881DEC2E630026B40A /* ViewController.m */,
 				1824121B1DF1023D00D8F477 /* WaveViewController.h */,
 				1824121C1DF1023D00D8F477 /* WaveViewController.m */,
+				18F5DB841DF692C600A3A6BA /* MaskViewController.h */,
+				18F5DB851DF692C600A3A6BA /* MaskViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 		1824121E1DF1032700D8F477 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18F5DB831DF692A100A3A6BA /* MaskView */,
 				1824121F1DF1032700D8F477 /* Wave */,
 			);
 			path = Views;
@@ -259,6 +268,15 @@
 				18D7E1181DEEA5A100DC605D /* DefineButton.m */,
 			);
 			path = DefineButton;
+			sourceTree = "<group>";
+		};
+		18F5DB831DF692A100A3A6BA /* MaskView */ = {
+			isa = PBXGroup;
+			children = (
+				18F5DB8A1DF69A4300A3A6BA /* UIView+MaskView.h */,
+				18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */,
+			);
+			path = MaskView;
 			sourceTree = "<group>";
 		};
 		48D57F230644C104EE9F34D3 /* Pods */ = {
@@ -468,12 +486,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F5DB861DF692C600A3A6BA /* MaskViewController.m in Sources */,
 				1824122E1DF1726800D8F477 /* SevenView.m in Sources */,
 				1824121A1DF0FA8900D8F477 /* MainViewController.m in Sources */,
 				1856E2891DEC2E630026B40A /* ViewController.m in Sources */,
 				1804FFCD1DED04F80029E4FB /* FirstView.m in Sources */,
 				182412221DF1036300D8F477 /* WavaImageView.m in Sources */,
 				1856E2861DEC2E630026B40A /* AppDelegate.m in Sources */,
+				18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */,
 				1804FFD11DED13230029E4FB /* SecondView.m in Sources */,
 				1856E2831DEC2E630026B40A /* main.m in Sources */,
 				1804FFD71DED24850029E4FB /* FourView.m in Sources */,
