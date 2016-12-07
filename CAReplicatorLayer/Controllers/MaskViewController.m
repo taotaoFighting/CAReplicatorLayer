@@ -7,8 +7,10 @@
 //
 
 #import "MaskViewController.h"
+#import "UIView+MaskView.h"
 
 @interface MaskViewController ()
+@property (nonatomic , strong) UIImageView * imageView;
 
 @end
 
@@ -16,7 +18,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    
+    [self.view addSubview:self.imageView];
+    
+}
+
+-(UIImageView *)imageView{
+    
+    if (!_imageView) {
+        
+        _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+        
+        [_imageView setImage:[UIImage imageNamed:@"water.jpg"]];
+        
+        [_imageView setupForStart];
+        
+    }
+    
+    return _imageView;
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [_imageView start];
+    
+    NSLog(@"touchesBegan");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +53,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -11,6 +11,7 @@
 #import "UIImageView+webCache.h"
 #import "SixView.h"
 #import "SevenView.h"
+#import "UIView+MaskView.h"
 
 @interface WaveViewController ()<NSURLSessionDelegate>
 
@@ -31,9 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"波纹";
+    self.title = @"图片加载动画";
     
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
     self.data = [NSMutableData data];
 
@@ -43,7 +44,7 @@
      *  sixView
      */
     
-    [self.view addSubview:self.sixView];
+    [self.waveImageView addSubview:self.sixView];
     
 //    [self.view addSubview:self.sevenView];
 
@@ -56,7 +57,9 @@
         return _waveImageView;
     }
     
-    _waveImageView = [[WavaImageView alloc]initWithFrame:CGRectMake(0, 64, KS_Width, KS_Height)];
+    _waveImageView = [[WavaImageView alloc]initWithFrame:CGRectMake(0, 64, 0, 0)];
+    
+    [_waveImageView setBackgroundColor:[UIColor blackColor]];
     
 //    [_waveImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img06.tooopen.com/images/20160830/tooopen_sl_177195524686.jpg"]];
     
@@ -117,6 +120,8 @@
         
         NSLog(@"请求数据失败，请重试");
         
+        [self.navigationController popViewControllerAnimated:YES];
+        
         return;
     }
     
@@ -139,9 +144,14 @@
 
     [self.waveImageView setImage:image];
     
-//    _sevenView.progress = 1.0f;
-    
+    [_waveImageView setupForStart];
+
     self.sixView.toValue = 1.0f;
+    
+    [self.waveImageView start];
+    
+    //    _sevenView.progress = 1.0f;
+
     
     NSLog(@"%@",task.response);
 }
@@ -153,7 +163,7 @@
         return _sixView;
     }
     
-    _sixView = [[SixView alloc]initWithFrame:CGRectMake(KS_Width / 2 - Iphone7(50), KS_Height / 2 - Iphone7(50), Iphone7(100), Iphone7(100))];
+    _sixView = [[SixView alloc]initWithFrame:CGRectMake(KS_Width / 2 - Iphone7(50), KS_Height / 2 - Iphone7(50) - 64, Iphone7(100), Iphone7(100))];
     
     _sixView.toValue = 0;
     

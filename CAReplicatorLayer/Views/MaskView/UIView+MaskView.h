@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+@interface Mask : UIImageView
+
+-(instancetype)initWithTargetView:(UIView *)view;
+
+-(void) startAnimation;
+
+@end
+
 @interface UIView (MaskView)
+
+- (void)setupForStart;
+
+- (void)start;
 
 @end

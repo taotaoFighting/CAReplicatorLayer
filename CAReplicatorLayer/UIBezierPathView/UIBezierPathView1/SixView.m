@@ -67,10 +67,19 @@
     
     if (toValue >= 1.0) {
         
-        [self performFinishAnimation];
+//        [self performFinishAnimation];
+        
+        [self removeLabelAndShapeLayer];
     }
     
 //    self.endValue = toValue;
+}
+
+-(void)removeLabelAndShapeLayer{
+    
+    [self.numberLabel removeFromSuperview];
+    
+    [self.shapeLayer removeFromSuperlayer];
 }
 
 - (void) startAnimationWithTovalue:(CGFloat) tovalue{

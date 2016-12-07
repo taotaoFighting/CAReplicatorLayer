@@ -93,7 +93,7 @@
         return _dataArr;
     }
     
-    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"波纹",@"遮罩层", nil];
+    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"加载进度条",@"遮罩层", nil];
     
     return _dataArr;
 }
