@@ -34,7 +34,7 @@
 
 -(void) initParamData{
     
-    [self setBackgroundColor:[UIColor lightGrayColor]];
+    [self setBackgroundColor:[UIColor colorWithRed:100 green:100 blue:100 alpha:.5]];
     
     self.smallDiameter = 40.0f;
     
@@ -146,7 +146,7 @@ NSInteger const kLXMRevealViewTag = 9527;
 - (void)setupForStart {
     
     Mask *revealView = [[Mask alloc] initWithTargetView:self];
-    
+        
     revealView.tag = kLXMRevealViewTag;
     
     [self addSubview:revealView];

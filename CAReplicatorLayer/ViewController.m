@@ -215,7 +215,7 @@
      *  love 路径
      */
     
-    UIBezierPath *lovaPath = [UIBezierPath bezierPath];
+//    UIBezierPath *lovaPath = [UIBezierPath bezierPath];
 }
 
 

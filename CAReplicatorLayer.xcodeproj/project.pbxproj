@@ -28,6 +28,28 @@
 		1856E2911DEC2E630026B40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1856E28F1DEC2E630026B40A /* LaunchScreen.storyboard */; };
 		1856E29C1DEC2E630026B40A /* CAReplicatorLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E29B1DEC2E630026B40A /* CAReplicatorLayerTests.m */; };
 		1856E2A71DEC2E630026B40A /* CAReplicatorLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */; };
+		18A83C241DF8E5220027F99E /* LodingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C231DF8E5220027F99E /* LodingImageView.m */; };
+		18A83C2A1DF908030027F99E /* UIView+LTEmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C291DF908030027F99E /* UIView+LTEmitterLayer.m */; };
+		18A83C2D1DF90EB10027F99E /* EmiterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C2C1DF90EB10027F99E /* EmiterViewController.m */; };
+		18A83C381DF945530027F99E /* GLIRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C311DF945530027F99E /* GLIRViewController.m */; };
+		18A83C391DF945530027F99E /* RippleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C331DF945530027F99E /* RippleModel.m */; };
+		18A83C3A1DF945530027F99E /* RippleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C351DF945530027F99E /* RippleTableViewController.m */; };
+		18A83C3B1DF945530027F99E /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C361DF945530027F99E /* Shader.fsh */; };
+		18A83C3C1DF945530027F99E /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C371DF945530027F99E /* Shader.vsh */; };
+		18A83C3E1DF945830027F99E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C3D1DF945830027F99E /* QuartzCore.framework */; };
+		18A83C401DF945930027F99E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C3F1DF945930027F99E /* OpenGLES.framework */; };
+		18A83C421DF9459F0027F99E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C411DF9459F0027F99E /* GLKit.framework */; };
+		18A83C441DF945AE0027F99E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C431DF945AE0027F99E /* CoreVideo.framework */; };
+		18A83C461DF945BE0027F99E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C451DF945BE0027F99E /* UIKit.framework */; };
+		18A83C481DF945CE0027F99E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C471DF945CE0027F99E /* Foundation.framework */; };
+		18A83C4A1DF945E50027F99E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A83C491DF945E50027F99E /* CoreGraphics.framework */; };
+		18A83C4D1DF9467B0027F99E /* RealWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C4C1DF9467B0027F99E /* RealWaveViewController.m */; };
+		18A83C4F1DF946EA0027F99E /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C4E1DF946EA0027F99E /* background.jpg */; };
+		18A83C531DF94A400027F99E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C501DF94A400027F99E /* Default-568h@2x.png */; };
+		18A83C541DF94A400027F99E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C511DF94A400027F99E /* Default.png */; };
+		18A83C551DF94A400027F99E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A83C521DF94A400027F99E /* Default@2x.png */; };
+		18A83C561DF94AFF0027F99E /* Shader.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C361DF945530027F99E /* Shader.fsh */; };
+		18A83C571DF94B080027F99E /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 18A83C371DF945530027F99E /* Shader.vsh */; };
 		18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7E1181DEEA5A100DC605D /* DefineButton.m */; };
 		18F5DB861DF692C600A3A6BA /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB851DF692C600A3A6BA /* MaskViewController.m */; };
 		18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */; };
@@ -93,6 +115,33 @@
 		1856E2A21DEC2E630026B40A /* CAReplicatorLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAReplicatorLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856E2A61DEC2E630026B40A /* CAReplicatorLayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerUITests.m; sourceTree = "<group>"; };
 		1856E2A81DEC2E630026B40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A83C221DF8E5220027F99E /* LodingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LodingImageView.h; sourceTree = "<group>"; };
+		18A83C231DF8E5220027F99E /* LodingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LodingImageView.m; sourceTree = "<group>"; };
+		18A83C281DF908030027F99E /* UIView+LTEmitterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LTEmitterLayer.h"; sourceTree = "<group>"; };
+		18A83C291DF908030027F99E /* UIView+LTEmitterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTEmitterLayer.m"; sourceTree = "<group>"; };
+		18A83C2B1DF90EB10027F99E /* EmiterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmiterViewController.h; sourceTree = "<group>"; };
+		18A83C2C1DF90EB10027F99E /* EmiterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmiterViewController.m; sourceTree = "<group>"; };
+		18A83C301DF945530027F99E /* GLIRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLIRViewController.h; sourceTree = "<group>"; };
+		18A83C311DF945530027F99E /* GLIRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLIRViewController.m; sourceTree = "<group>"; };
+		18A83C321DF945530027F99E /* RippleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleModel.h; sourceTree = "<group>"; };
+		18A83C331DF945530027F99E /* RippleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RippleModel.m; sourceTree = "<group>"; };
+		18A83C341DF945530027F99E /* RippleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RippleTableViewController.h; sourceTree = "<group>"; };
+		18A83C351DF945530027F99E /* RippleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RippleTableViewController.m; sourceTree = "<group>"; };
+		18A83C361DF945530027F99E /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		18A83C371DF945530027F99E /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		18A83C3D1DF945830027F99E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		18A83C3F1DF945930027F99E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		18A83C411DF9459F0027F99E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		18A83C431DF945AE0027F99E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		18A83C451DF945BE0027F99E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18A83C471DF945CE0027F99E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18A83C491DF945E50027F99E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18A83C4B1DF9467B0027F99E /* RealWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealWaveViewController.h; sourceTree = "<group>"; };
+		18A83C4C1DF9467B0027F99E /* RealWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealWaveViewController.m; sourceTree = "<group>"; };
+		18A83C4E1DF946EA0027F99E /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		18A83C501DF94A400027F99E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18A83C511DF94A400027F99E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		18A83C521DF94A400027F99E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		18D7E1171DEEA5A100DC605D /* DefineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineButton.h; sourceTree = "<group>"; };
 		18D7E1181DEEA5A100DC605D /* DefineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineButton.m; sourceTree = "<group>"; };
 		18F5DB841DF692C600A3A6BA /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
@@ -108,6 +157,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A83C4A1DF945E50027F99E /* CoreGraphics.framework in Frameworks */,
+				18A83C481DF945CE0027F99E /* Foundation.framework in Frameworks */,
+				18A83C461DF945BE0027F99E /* UIKit.framework in Frameworks */,
+				18A83C441DF945AE0027F99E /* CoreVideo.framework in Frameworks */,
+				18A83C421DF9459F0027F99E /* GLKit.framework in Frameworks */,
+				18A83C401DF945930027F99E /* OpenGLES.framework in Frameworks */,
+				18A83C3E1DF945830027F99E /* QuartzCore.framework in Frameworks */,
 				1824122B1DF1475400D8F477 /* Security.framework in Frameworks */,
 				89F5A65E02D4EAC444A354B0 /* libPods.a in Frameworks */,
 			);
@@ -139,6 +195,10 @@
 				1824121C1DF1023D00D8F477 /* WaveViewController.m */,
 				18F5DB841DF692C600A3A6BA /* MaskViewController.h */,
 				18F5DB851DF692C600A3A6BA /* MaskViewController.m */,
+				18A83C2B1DF90EB10027F99E /* EmiterViewController.h */,
+				18A83C2C1DF90EB10027F99E /* EmiterViewController.m */,
+				18A83C4B1DF9467B0027F99E /* RealWaveViewController.h */,
+				18A83C4C1DF9467B0027F99E /* RealWaveViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +247,7 @@
 		1856E2801DEC2E630026B40A /* CAReplicatorLayer */ = {
 			isa = PBXGroup;
 			children = (
+				18A83C2E1DF945530027F99E /* Vendor */,
 				1824121E1DF1032700D8F477 /* Views */,
 				182412171DF0FA6500D8F477 /* Controllers */,
 				1856E2B41DEC337F0026B40A /* UIBezierPathView */,
@@ -198,6 +259,10 @@
 				1804FFD91DED267E0029E4FB /* DefineCircle.m */,
 				1856E28A1DEC2E630026B40A /* Main.storyboard */,
 				182412231DF105D200D8F477 /* water.jpg */,
+				18A83C501DF94A400027F99E /* Default-568h@2x.png */,
+				18A83C511DF94A400027F99E /* Default.png */,
+				18A83C521DF94A400027F99E /* Default@2x.png */,
+				18A83C4E1DF946EA0027F99E /* background.jpg */,
 				1856E28D1DEC2E630026B40A /* Assets.xcassets */,
 				1856E28F1DEC2E630026B40A /* LaunchScreen.storyboard */,
 				1856E2921DEC2E630026B40A /* Info.plist */,
@@ -261,6 +326,29 @@
 			path = UIBezierPathView1;
 			sourceTree = "<group>";
 		};
+		18A83C2E1DF945530027F99E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				18A83C2F1DF945530027F99E /* RealWave */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		18A83C2F1DF945530027F99E /* RealWave */ = {
+			isa = PBXGroup;
+			children = (
+				18A83C301DF945530027F99E /* GLIRViewController.h */,
+				18A83C311DF945530027F99E /* GLIRViewController.m */,
+				18A83C321DF945530027F99E /* RippleModel.h */,
+				18A83C331DF945530027F99E /* RippleModel.m */,
+				18A83C341DF945530027F99E /* RippleTableViewController.h */,
+				18A83C351DF945530027F99E /* RippleTableViewController.m */,
+				18A83C361DF945530027F99E /* Shader.fsh */,
+				18A83C371DF945530027F99E /* Shader.vsh */,
+			);
+			path = RealWave;
+			sourceTree = "<group>";
+		};
 		18D7E1161DEEA47E00DC605D /* DefineButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +363,10 @@
 			children = (
 				18F5DB8A1DF69A4300A3A6BA /* UIView+MaskView.h */,
 				18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */,
+				18A83C221DF8E5220027F99E /* LodingImageView.h */,
+				18A83C231DF8E5220027F99E /* LodingImageView.m */,
+				18A83C281DF908030027F99E /* UIView+LTEmitterLayer.h */,
+				18A83C291DF908030027F99E /* UIView+LTEmitterLayer.m */,
 			);
 			path = MaskView;
 			sourceTree = "<group>";
@@ -291,6 +383,13 @@
 		CAF439E64E5AFB9AEC070CB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18A83C491DF945E50027F99E /* CoreGraphics.framework */,
+				18A83C471DF945CE0027F99E /* Foundation.framework */,
+				18A83C451DF945BE0027F99E /* UIKit.framework */,
+				18A83C431DF945AE0027F99E /* CoreVideo.framework */,
+				18A83C411DF9459F0027F99E /* GLKit.framework */,
+				18A83C3F1DF945930027F99E /* OpenGLES.framework */,
+				18A83C3D1DF945830027F99E /* QuartzCore.framework */,
 				1824122A1DF1475400D8F477 /* Security.framework */,
 				8606DB24FF1BA23F4D6D333B /* libPods.a */,
 			);
@@ -409,11 +508,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A83C3B1DF945530027F99E /* Shader.fsh in Resources */,
+				18A83C3C1DF945530027F99E /* Shader.vsh in Resources */,
+				18A83C531DF94A400027F99E /* Default-568h@2x.png in Resources */,
 				182412261DF10A2A00D8F477 /* Podfile in Resources */,
 				1856E2911DEC2E630026B40A /* LaunchScreen.storyboard in Resources */,
+				18A83C551DF94A400027F99E /* Default@2x.png in Resources */,
 				1856E28E1DEC2E630026B40A /* Assets.xcassets in Resources */,
+				18A83C4F1DF946EA0027F99E /* background.jpg in Resources */,
 				1856E28C1DEC2E630026B40A /* Main.storyboard in Resources */,
 				182412241DF105D200D8F477 /* water.jpg in Resources */,
+				18A83C541DF94A400027F99E /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,21 +591,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A83C571DF94B080027F99E /* Shader.vsh in Sources */,
+				18A83C561DF94AFF0027F99E /* Shader.fsh in Sources */,
+				18A83C2D1DF90EB10027F99E /* EmiterViewController.m in Sources */,
 				18F5DB861DF692C600A3A6BA /* MaskViewController.m in Sources */,
 				1824122E1DF1726800D8F477 /* SevenView.m in Sources */,
+				18A83C241DF8E5220027F99E /* LodingImageView.m in Sources */,
 				1824121A1DF0FA8900D8F477 /* MainViewController.m in Sources */,
 				1856E2891DEC2E630026B40A /* ViewController.m in Sources */,
 				1804FFCD1DED04F80029E4FB /* FirstView.m in Sources */,
 				182412221DF1036300D8F477 /* WavaImageView.m in Sources */,
+				18A83C4D1DF9467B0027F99E /* RealWaveViewController.m in Sources */,
+				18A83C2A1DF908030027F99E /* UIView+LTEmitterLayer.m in Sources */,
 				1856E2861DEC2E630026B40A /* AppDelegate.m in Sources */,
 				18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */,
+				18A83C3A1DF945530027F99E /* RippleTableViewController.m in Sources */,
 				1804FFD11DED13230029E4FB /* SecondView.m in Sources */,
+				18A83C381DF945530027F99E /* GLIRViewController.m in Sources */,
 				1856E2831DEC2E630026B40A /* main.m in Sources */,
 				1804FFD71DED24850029E4FB /* FourView.m in Sources */,
 				1804FFDA1DED267E0029E4FB /* DefineCircle.m in Sources */,
 				1804FFD41DED20EC0029E4FB /* ThreeView.m in Sources */,
 				1824121D1DF1023D00D8F477 /* WaveViewController.m in Sources */,
 				18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */,
+				18A83C391DF945530027F99E /* RippleModel.m in Sources */,
 				1804FFDD1DED522F0029E4FB /* SixView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

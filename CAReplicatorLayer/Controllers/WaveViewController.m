@@ -12,6 +12,7 @@
 #import "SixView.h"
 #import "SevenView.h"
 #import "UIView+MaskView.h"
+#import "LodingImageView.h"
 
 @interface WaveViewController ()<NSURLSessionDelegate>
 
@@ -24,6 +25,8 @@
 @property (nonatomic , strong) SixView * sixView;
 
 @property (nonatomic , strong) SevenView * sevenView;
+
+@property (nonatomic , strong) LodingImageView * lodingImageView;
 
 @end
 
@@ -40,6 +43,8 @@
 
     [self.view addSubview:self.waveImageView];
     
+    [self.view addSubview:self.lodingImageView];
+    
     /**
      *  sixView
      */
@@ -48,6 +53,18 @@
     
 //    [self.view addSubview:self.sevenView];
 
+}
+
+-(LodingImageView *)lodingImageView{
+    
+    if (!_lodingImageView) {
+        
+        _lodingImageView = [[LodingImageView alloc]initWithFrame:CGRectMake(0, 80, 100, 100)];
+        
+        [_lodingImageView setBackgroundColor:[UIColor redColor]];
+    }
+    
+    return _lodingImageView;
 }
 
 -(WavaImageView *)waveImageView{
@@ -143,6 +160,8 @@
     [self.waveImageView setCenter:self.view.center];
 
     [self.waveImageView setImage:image];
+    
+    [self.lodingImageView setImage:image];
     
     [_waveImageView setupForStart];
 
