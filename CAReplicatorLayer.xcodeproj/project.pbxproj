@@ -53,6 +53,12 @@
 		18D7E1191DEEA5A100DC605D /* DefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7E1181DEEA5A100DC605D /* DefineButton.m */; };
 		18F5DB861DF692C600A3A6BA /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB851DF692C600A3A6BA /* MaskViewController.m */; };
 		18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */; };
+		18FDDA491DFA35E5006C4F53 /* MorePicLodingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDDA481DFA35E5006C4F53 /* MorePicLodingViewController.m */; };
+		18FDDA4C1DFA3721006C4F53 /* RequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDDA4B1DFA3721006C4F53 /* RequestData.m */; };
+		18FDDA541DFA46EF006C4F53 /* MorePicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDDA521DFA46EF006C4F53 /* MorePicTableViewCell.m */; };
+		18FDDA551DFA46EF006C4F53 /* MorePicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDDA531DFA46EF006C4F53 /* MorePicTableViewCell.xib */; };
+		18FDDA591DFA4952006C4F53 /* MorePicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDDA581DFA4952006C4F53 /* MorePicModel.m */; };
+		18FDDA5B1DFA63AB006C4F53 /* IMG_0602.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 18FDDA5A1DFA63AB006C4F53 /* IMG_0602.PNG */; };
 		89F5A65E02D4EAC444A354B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8606DB24FF1BA23F4D6D333B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +154,16 @@
 		18F5DB851DF692C600A3A6BA /* MaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
 		18F5DB8A1DF69A4300A3A6BA /* UIView+MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MaskView.h"; sourceTree = "<group>"; };
 		18F5DB8B1DF69A4300A3A6BA /* UIView+MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MaskView.m"; sourceTree = "<group>"; };
+		18FDDA471DFA35E5006C4F53 /* MorePicLodingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePicLodingViewController.h; sourceTree = "<group>"; };
+		18FDDA481DFA35E5006C4F53 /* MorePicLodingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePicLodingViewController.m; sourceTree = "<group>"; };
+		18FDDA4A1DFA3721006C4F53 /* RequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestData.h; sourceTree = "<group>"; };
+		18FDDA4B1DFA3721006C4F53 /* RequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestData.m; sourceTree = "<group>"; };
+		18FDDA511DFA46EF006C4F53 /* MorePicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePicTableViewCell.h; sourceTree = "<group>"; };
+		18FDDA521DFA46EF006C4F53 /* MorePicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePicTableViewCell.m; sourceTree = "<group>"; };
+		18FDDA531DFA46EF006C4F53 /* MorePicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MorePicTableViewCell.xib; sourceTree = "<group>"; };
+		18FDDA571DFA4952006C4F53 /* MorePicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorePicModel.h; sourceTree = "<group>"; };
+		18FDDA581DFA4952006C4F53 /* MorePicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorePicModel.m; sourceTree = "<group>"; };
+		18FDDA5A1DFA63AB006C4F53 /* IMG_0602.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0602.PNG; sourceTree = "<group>"; };
 		2989F0E1167C00DF30D6C4AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8606DB24FF1BA23F4D6D333B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -199,6 +215,8 @@
 				18A83C2C1DF90EB10027F99E /* EmiterViewController.m */,
 				18A83C4B1DF9467B0027F99E /* RealWaveViewController.h */,
 				18A83C4C1DF9467B0027F99E /* RealWaveViewController.m */,
+				18FDDA471DFA35E5006C4F53 /* MorePicLodingViewController.h */,
+				18FDDA481DFA35E5006C4F53 /* MorePicLodingViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +224,8 @@
 		1824121E1DF1032700D8F477 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18FDDA561DFA492B006C4F53 /* MorePicModel */,
+				18FDDA4D1DFA46BB006C4F53 /* Cells */,
 				18F5DB831DF692A100A3A6BA /* MaskView */,
 				1824121F1DF1032700D8F477 /* Wave */,
 			);
@@ -259,6 +279,7 @@
 				1804FFD91DED267E0029E4FB /* DefineCircle.m */,
 				1856E28A1DEC2E630026B40A /* Main.storyboard */,
 				182412231DF105D200D8F477 /* water.jpg */,
+				18FDDA5A1DFA63AB006C4F53 /* IMG_0602.PNG */,
 				18A83C501DF94A400027F99E /* Default-568h@2x.png */,
 				18A83C511DF94A400027F99E /* Default.png */,
 				18A83C521DF94A400027F99E /* Default@2x.png */,
@@ -367,8 +388,29 @@
 				18A83C231DF8E5220027F99E /* LodingImageView.m */,
 				18A83C281DF908030027F99E /* UIView+LTEmitterLayer.h */,
 				18A83C291DF908030027F99E /* UIView+LTEmitterLayer.m */,
+				18FDDA4A1DFA3721006C4F53 /* RequestData.h */,
+				18FDDA4B1DFA3721006C4F53 /* RequestData.m */,
 			);
 			path = MaskView;
+			sourceTree = "<group>";
+		};
+		18FDDA4D1DFA46BB006C4F53 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18FDDA511DFA46EF006C4F53 /* MorePicTableViewCell.h */,
+				18FDDA521DFA46EF006C4F53 /* MorePicTableViewCell.m */,
+				18FDDA531DFA46EF006C4F53 /* MorePicTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18FDDA561DFA492B006C4F53 /* MorePicModel */ = {
+			isa = PBXGroup;
+			children = (
+				18FDDA571DFA4952006C4F53 /* MorePicModel.h */,
+				18FDDA581DFA4952006C4F53 /* MorePicModel.m */,
+			);
+			path = MorePicModel;
 			sourceTree = "<group>";
 		};
 		48D57F230644C104EE9F34D3 /* Pods */ = {
@@ -509,12 +551,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A83C3B1DF945530027F99E /* Shader.fsh in Resources */,
+				18FDDA5B1DFA63AB006C4F53 /* IMG_0602.PNG in Resources */,
 				18A83C3C1DF945530027F99E /* Shader.vsh in Resources */,
 				18A83C531DF94A400027F99E /* Default-568h@2x.png in Resources */,
 				182412261DF10A2A00D8F477 /* Podfile in Resources */,
 				1856E2911DEC2E630026B40A /* LaunchScreen.storyboard in Resources */,
 				18A83C551DF94A400027F99E /* Default@2x.png in Resources */,
 				1856E28E1DEC2E630026B40A /* Assets.xcassets in Resources */,
+				18FDDA551DFA46EF006C4F53 /* MorePicTableViewCell.xib in Resources */,
 				18A83C4F1DF946EA0027F99E /* background.jpg in Resources */,
 				1856E28C1DEC2E630026B40A /* Main.storyboard in Resources */,
 				182412241DF105D200D8F477 /* water.jpg in Resources */,
@@ -598,11 +642,15 @@
 				1824122E1DF1726800D8F477 /* SevenView.m in Sources */,
 				18A83C241DF8E5220027F99E /* LodingImageView.m in Sources */,
 				1824121A1DF0FA8900D8F477 /* MainViewController.m in Sources */,
+				18FDDA541DFA46EF006C4F53 /* MorePicTableViewCell.m in Sources */,
 				1856E2891DEC2E630026B40A /* ViewController.m in Sources */,
 				1804FFCD1DED04F80029E4FB /* FirstView.m in Sources */,
+				18FDDA591DFA4952006C4F53 /* MorePicModel.m in Sources */,
+				18FDDA491DFA35E5006C4F53 /* MorePicLodingViewController.m in Sources */,
 				182412221DF1036300D8F477 /* WavaImageView.m in Sources */,
 				18A83C4D1DF9467B0027F99E /* RealWaveViewController.m in Sources */,
 				18A83C2A1DF908030027F99E /* UIView+LTEmitterLayer.m in Sources */,
+				18FDDA4C1DFA3721006C4F53 /* RequestData.m in Sources */,
 				1856E2861DEC2E630026B40A /* AppDelegate.m in Sources */,
 				18F5DB8C1DF69A4300A3A6BA /* UIView+MaskView.m in Sources */,
 				18A83C3A1DF945530027F99E /* RippleTableViewController.m in Sources */,

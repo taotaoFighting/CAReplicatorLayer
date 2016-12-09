@@ -29,6 +29,8 @@
     
     if (image) {
         
+        [self setupForStart];
+        
         [self start];
     }
     

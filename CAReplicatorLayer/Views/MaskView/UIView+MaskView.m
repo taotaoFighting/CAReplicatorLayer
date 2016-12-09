@@ -146,6 +146,10 @@ NSInteger const kLXMRevealViewTag = 9527;
 - (void)setupForStart {
     
     Mask *revealView = [[Mask alloc] initWithTargetView:self];
+    
+    CGPoint center = self.center;
+    
+    revealView.center = center;
         
     revealView.tag = kLXMRevealViewTag;
     
@@ -157,6 +161,8 @@ NSInteger const kLXMRevealViewTag = 9527;
 - (void)start {
     
     Mask *mask = (Mask *)[self viewWithTag:kLXMRevealViewTag];
+    
+    mask.center = self.center;
     
     [mask startAnimation];
 }

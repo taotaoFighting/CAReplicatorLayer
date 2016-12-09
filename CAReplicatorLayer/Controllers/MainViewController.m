@@ -12,6 +12,7 @@
 #import "MaskViewController.h"
 #import "EmiterViewController.h"
 #import "RealWaveViewController.h"
+#import "MorePicLodingViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -92,6 +93,9 @@
 //        controller = [[RealWaveViewController alloc]init];
         
         return;
+    }else if (indexPath.row == 5){
+        
+        controller = [[MorePicLodingViewController alloc]init];
     }
     
     [self.navigationController pushViewController:controller animated:YES];
@@ -122,7 +126,7 @@
         return _dataArr;
     }
     
-    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"加载进度条",@"遮罩层",@"粒子动画",@"真是波纹效果", nil];
+    _dataArr = [NSMutableArray arrayWithObjects:@"基本图形",@"加载进度条",@"遮罩层",@"粒子动画",@"真是波纹效果",@"多图片加载效果", nil];
     
     return _dataArr;
 }
